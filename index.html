@@ -1,286 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Saeed | Full Stack Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Saeed | Full Stack Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="logo">Ahmed Shalaby</a>
-        <ul class="nav-links">
-            <li><a href="#about" class="active">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+  <!-- Custom cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Particle background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ═══════════════════════ NAV ═══════════════════════ -->
+  <nav>
+    <a href="#" class="logo">Ahmed<span>.</span>Shalaby</a>
+    <ul class="nav-links">
+      <li><a href="#about"      class="active">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark and light mode">
+        <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════ HERO ══════════════════════ -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-text hidden">
+        <h3>Hello, I'm</h3>
+        <h1 class="glitch-name" data-text="Ahmed Saeed Shalaby">Ahmed Saeed Shalaby</h1>
+        <h2 data-text="Full Stack Engineer">Full Stack Engineer</h2>
+
+        <p>I build interactive, scalable, and accessible web applications. Passionate about transforming ideas into reality through code.</p>
+
+        <div class="btn-box" style="justify-content:inherit;">
+          <a target="_blank" href="CV.pdf" class="btn btn-outline">Download CV &nbsp;<i class="fas fa-download"></i></a>
+          <a href="#contact" class="btn btn-fill">Contact Me</a>
+        </div>
+
+        <div class="linkss" style="margin-top:32px;font-size:1.5rem;display:flex;gap:22px;justify-content:inherit;">
+          <a target="_blank" href="https://www.linkedin.com/in/ahmed-shalaby-047ab8295/" style="color:var(--text-muted)"><i class="fab fa-linkedin"></i></a>
+          <a target="_blank" href="https://github.com/ahmedshalaby03"                    style="color:var(--text-muted)"><i class="fab fa-github"></i></a>
+          <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmedsshalaby9@gmail.com" style="color:var(--text-muted)"><i class="fab fa-google"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-img-container hidden">
+        <div class="hero-img"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ABOUT ═════════════════════ -->
+  <section id="about">
+    <div class="section-header hidden">
+      <span>MY JOURNEY</span>
+      <h2>About Me</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="info-card hidden">
+        <h3><i class="fas fa-university" style="color:var(--primary)"></i> Education</h3>
+        <ul>
+          <li>
+            <strong>Faculty of Electronic Engineering</strong><br>
+            <span style="color:var(--text-muted);font-size:.85rem">Menoufia University</span><br>
+            B.Sc. in Computer Science &amp; Engineering<br>
+            <span style="font-size:.8rem;color:var(--neon-yellow);font-weight:700;margin-top:6px;display:block">
+              2020 – 2025 &nbsp;|&nbsp; Grade: Very Good
+            </span>
+          </li>
         </ul>
-    </nav>
+      </div>
 
-    <section id="hero">
-        <div class="hero-content">
-            <div class="hero-text hidden">
-                <h3>Hello, I'm</h3>
-                <h1>Ahmed Saeed Shalaby</h1>
-                <h2 style="color: var(--secondary); margin-bottom: 20px;">Full Stack Engineer</h2>
-                <p>I build interactive, scalable, and accessible web applications. Passionate about transforming ideas into reality through code.</p>
-                <div class="btn-box" style="justify-content: inherit;">
-                    <a target="_blank" href="CV.pdf" class="btn btn-outline">Download CV <i class="fas fa-download"></i></a>
-                    <a href="#contact" class="btn btn-fill">Contact Me</a>
-                </div>
-                <div class="linkss" style="margin-top: 30px; font-size: 1.5rem; display: flex; gap: 20px; justify-content: inherit;">
-                    <a target="_blank" href="https://www.linkedin.com/in/ahmed-shalaby-047ab8295/" style="color:var(--text-muted)"><i class="fab fa-linkedin"></i></a>
-                    <a target="_blank" href="https://github.com/ahmedshalaby03" style="color:var(--text-muted)"><i class="fab fa-github"></i></a>
-                    <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmedsshalaby9@gmail.com" style="color:var(--text-muted)"><i class="fab fa-google"></i></a>
-                </div>
-            </div>
-            <div class="hero-img-container hidden">
-                <div class="hero-img"></div> </div>
+      <div class="info-card hidden" style="transition-delay:.15s">
+        <h3><i class="fas fa-code-branch" style="color:var(--secondary)"></i> Experience</h3>
+        <ul>
+          <li>
+            <strong>Full Stack (.NET) Trainee</strong><br>
+            <span style="color:var(--text-muted)">Information Technology Institute (ITI)</span><br>
+            <span style="font-size:.8rem;opacity:.6">Oct 2025 – Present</span>
+          </li>
+          <li>
+            <strong>Full Stack (.NET) Trainee</strong><br>
+            <span style="color:var(--text-muted)">Digital Egypt Pioneers Initiative (DEPI)</span><br>
+            <span style="font-size:.8rem;opacity:.6">Nov 2024 – May 2025</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="info-card hidden" style="transition-delay:.3s">
+        <h3><i class="fas fa-laptop-code" style="color:#e879f9"></i> Previous Training</h3>
+        <ul>
+          <li>
+            <strong>Full Stack (.NET) Trainee</strong><br>
+            <span style="color:var(--text-muted)">ITI (Summer Internship)</span><br>
+            <span style="font-size:.8rem;opacity:.6">Sep 2024 – Oct 2024</span>
+          </li>
+          <li>
+            <strong>Cybersecurity &amp; Ethical Hacking Trainee</strong><br>
+            <span style="color:var(--text-muted)">ITI (Summer Internship)</span><br>
+            <span style="font-size:.8rem;opacity:.6">Aug 2024 – Sep 2024</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ EXPERIENCE / SKILLS ═══════════ -->
+  <section id="experience">
+    <div class="section-header hidden">
+      <span>Explore My</span>
+      <h2>Skills &amp; Experience</h2>
+    </div>
+
+    <div class="skills-container">
+      <div class="skill-box hidden">
+        <h3 class="skill-category">Programming Languages &amp; Tech</h3>
+        <div class="skill-tags">
+          <span class="tag"><i class="fab fa-microsoft"></i> C#</span>
+          <span class="tag"><i class="fas fa-server"></i> ASP.NET MVC &amp; Web API</span>
+          <span class="tag"><i class="fas fa-database"></i> SQL &amp; LINQ</span>
+          <span class="tag"><i class="fas fa-code"></i> EF Core</span>
+          <span class="tag"><i class="fab fa-html5"></i> HTML5 &amp; CSS</span>
+          <span class="tag"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
+          <span class="tag"><i class="fab fa-angular"></i> Angular</span>
+          <span class="tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+          <span class="tag"><i class="fab fa-node"></i> Node.js</span>
+          <span class="tag"><i class="fas fa-code-branch"></i> C++</span>
+          <span class="tag"><i class="fab fa-microsoft"></i> Microsoft Azure</span>
+          <span class="tag"><i class="fas fa-chart-bar"></i> Power BI</span>
+          <span class="tag"><i class="fas fa-network-wired"></i> Networking &amp; Security</span>
+          <span class="tag"><i class="fas fa-user-secret"></i> Ethical Hacking</span>
+          <span class="tag"><i class="fas fa-shield-alt"></i> Cybersecurity</span>
+          <span class="tag"><i class="fas fa-server"></i> Fortinet &amp; Palo Alto</span>
         </div>
-    </section>
+      </div>
 
-    <section id="about">
-        <div class="section-header hidden">
-            <span>MY JOURNEY</span>
-            <h2>About Me</h2>
+      <div class="skill-box hidden" style="transition-delay:.15s">
+        <h3 class="skill-category">Concepts &amp; Soft Skills</h3>
+        <div class="skill-tags">
+          <span class="tag"><i class="fas fa-cubes"></i> SOLID &amp; Patterns</span>
+          <span class="tag"><i class="fas fa-sync"></i> SDLC &amp; Agile</span>
+          <span class="tag"><i class="fas fa-project-diagram"></i> Data Structures</span>
+          <span class="tag"><i class="fas fa-database"></i> Databases &amp; OS</span>
+          <span class="tag"><i class="fas fa-robot"></i> Generative AI</span>
+          <span class="tag"><i class="fas fa-users"></i> Teamwork</span>
+          <span class="tag"><i class="fas fa-comments"></i> Communication</span>
+          <span class="tag"><i class="fas fa-chalkboard-teacher"></i> Presentation Skills</span>
+          <span class="tag"><i class="fas fa-globe"></i> English</span>
+          <span class="tag"><i class="fas fa-briefcase"></i> CRM &amp; Business Dev</span>
         </div>
-        
-        <div class="about-grid">
-            <div class="info-card hidden">
-                <h3><i class="fas fa-university" style="color:var(--primary)"></i> Education</h3>
-                <ul>
-                    <li>
-                        <strong>Faculty of Electronic Engineering</strong><br>
-                        <span style="color:var(--text-muted); font-size: 0.9rem;">Menoufia University</span><br>
-                        B.Sc. in Computer Science & Engineering<br>
-                        <span style="font-size:0.85rem; color:var(--accent); font-weight:bold; margin-top:5px; display:block;">
-                            2020 - 2025 | Grade: Very Good
-                        </span>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="info-card hidden" style="transition-delay: 0.2s">
-                <h3><i class="fas fa-code-branch" style="color:var(--secondary)"></i> Experience</h3>
-                <ul>
-                    <li>
-                        <strong>Full Stack (.NET) Trainee</strong><br>
-                        <span style="color:var(--text-muted)">Information Technology Institute (ITI)</span><br>
-                        <span style="font-size:0.85rem; opacity:0.7">Oct 2025 - Present</span>
-                    </li>
-                    <li>
-                        <strong>Full Stack (.NET) Trainee</strong><br>
-                        <span style="color:var(--text-muted)">Digital Egypt Pioneers Initiative (DEPI)</span><br>
-                        <span style="font-size:0.85rem; opacity:0.7">Nov 2024 - May 2025</span>
-                    </li>
-                </ul>
-            </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="info-card hidden" style="transition-delay: 0.4s">
-                <h3><i class="fas fa-laptop-code" style="color:#e879f9"></i> Previous Training</h3>
-                <ul>
-                    <li>
-                        <strong>Full Stack (.NET) Trainee</strong><br>
-                        <span style="color:var(--text-muted)">ITI (Summer Internship)</span><br>
-                        <span style="font-size:0.85rem; opacity:0.7">Sep 2024 - Oct 2024</span>
-                    </li>
-                    <li>
-                        <strong>Cybersecurity & Ethical Hacking Trainee</strong><br>
-                        <span style="color:var(--text-muted)">ITI (Summer Internship)</span><br>
-                        <span style="font-size:0.85rem; opacity:0.7">Aug 2024 - Sep 2024</span>
-                    </li>
-                </ul>
-            </div>
+  <!-- ═══════════════════════ PROJECTS ══════════════════ -->
+  <section id="projects">
+    <div class="section-header hidden">
+      <span>MY WORK</span>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- 1 – Hotel Booking -->
+      <div class="project-card hidden">
+        <div class="project-img"><i class="fas fa-hotel"></i></div>
+        <div class="project-info">
+          <h3>Hotel Booking System</h3>
+          <p style="font-size:.82rem;color:#999;margin-bottom:14px;line-height:1.7">
+            Full-stack hotel booking app built on clean architecture. Covers user authentication via ASP.NET Identity, hotel listing, room management, booking flow, and reservation tracking — all with a responsive UI.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:7px">
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">ASP.NET Core MVC</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">C#</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">EF Core</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">SQL Server</span>
+          </div>
         </div>
-    </section>
+      </div>
 
-<section id="experience">
-        <div class="section-header hidden">
-            <span>Explore My</span>
-            <h2>Skills & Experience</h2>
+      <!-- 2 – Healthcare (Graduation) -->
+      <div class="project-card hidden" style="transition-delay:.1s">
+        <div class="project-img"><i class="fas fa-heartbeat"></i></div>
+        <div class="project-info">
+          <div class="grad-badge">★ Graduation Project</div>
+          <h3>Smart Healthcare Platform</h3>
+          <p style="font-size:.82rem;color:#999;margin-bottom:14px;line-height:1.7">
+            Connects patients, doctors, hospitals &amp; medical services in one platform. Features online appointment booking, digital insurance requests, location-based hospital discovery, a blood-bank module, and AI-powered medical assistance via LLM + RAG.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:7px">
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">ASP.NET Core Web API</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">SQL Server</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">LLM</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">RAG</span>
+          </div>
         </div>
-        <div class="skills-container">
-            <div class="skill-box hidden">
-                <h3 class="skill-category">Programming Languages & Tech</h3>
-                <div class="skill-tags">
-                    <span class="tag"><i class="fab fa-microsoft"></i> C#</span>
-                    <span class="tag"><i class="fas fa-server"></i> ASP.NET MVC & Web API</span>
-                    <span class="tag"><i class="fas fa-database"></i> SQL & LINQ</span>
-                    <span class="tag"><i class="fas fa-code"></i> EF Core</span>
-                    
-                    <span class="tag"><i class="fab fa-html5"></i> HTML5 & CSS</span>
-                    <span class="tag"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
-                    <span class="tag"><i class="fab fa-angular"></i> AngularJS</span>
-                    <span class="tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-                    <span class="tag"><i class="fab fa-node"></i> Node.js</span>
+      </div>
 
-                    <span class="tag"><i class="fas fa-code-branch"></i> C++</span>
-                    <span class="tag"><i class="fab fa-microsoft"></i> Microsoft Azure</span>
-                    <span class="tag"><i class="fas fa-chart-bar"></i> Power BI</span>
-                     <span class="tag"><i class="fas fa-network-wired"></i> Networking & Security</span>
-                    <span class="tag"><i class="fas fa-user-secret"></i> Ethical Hacking</span>
-                    <span class="tag"><i class="fas fa-shield-alt"></i> Cybersecurity</span>
-                    <span class="tag"><i class="fas fa-server"></i> Fortinet & Palo Alto</span>
-                </div>
-            </div>
-
-            <div class="skill-box hidden" style="transition-delay: 0.2s">
-                <h3 class="skill-category">Concepts & Soft Skills</h3>
-                <div class="skill-tags">
-                   
-
-                    <span class="tag"><i class="fas fa-cubes"></i> SOLID & Patterns</span>
-                    <span class="tag"><i class="fas fa-sync"></i> SDLC & Agile</span>
-                    <span class="tag"><i class="fas fa-project-diagram"></i> Data Structures</span>
-                    <span class="tag"><i class="fas fa-database"></i> Databases & OS</span>
-                    <span class="tag"><i class="fas fa-robot"></i> Generative AI</span>
-                    <span class="tag"><i class="fas fa-chart-bar"></i> Power BI</span>
-                    <span class="tag"><i class="fas fa-users"></i> Teamwork</span>
-                    <span class="tag"><i class="fas fa-comments"></i> Communication</span>
-                    <span class="tag"><i class="fas fa-chalkboard-teacher"></i> Presentation Skills</span>
-                    <span class="tag"><i class="fas fa-globe"></i> English</span>
-                    <span class="tag"><i class="fas fa-briefcase"></i> CRM & Business Dev</span>
-                </div>
-            </div>
+      <!-- 3 – E-Commerce -->
+      <div class="project-card hidden" style="transition-delay:.2s">
+        <div class="project-img"><i class="fas fa-shopping-cart"></i></div>
+        <div class="project-info">
+          <h3>E-Commerce Web Application</h3>
+          <p style="font-size:.82rem;color:#999;margin-bottom:14px;line-height:1.7">
+            DEPI Project. Full-stack online store — browse products, view details, add to cart, and place orders. Includes product management, shopping cart, and order processing with a Bootstrap-powered responsive UI.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:7px">
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">ASP.NET MVC</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">C#</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">EF Core</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">SQL Server</span>
+          </div>
         </div>
+      </div>
+
+      <!-- 4 – Expense Tracker -->
+      <div class="project-card hidden" style="transition-delay:.05s">
+        <div class="project-img"><i class="fas fa-wallet"></i></div>
+        <div class="project-info">
+          <h3>Expense Tracker Web App</h3>
+          <p style="font-size:.82rem;color:#999;margin-bottom:14px;line-height:1.7">
+            Full-stack expense tracker built with Onion Architecture (API / Application / Domain / Infrastructure). Manages income, expenses, categories, transactions &amp; financial reports. JWT auth, advanced filtering by date, type &amp; category, and dashboard summaries with an Angular frontend.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:7px">
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">Angular</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">ASP.NET Core Web API</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">JWT</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">SQL Server</span>
+          </div>
         </div>
-    </section>
+      </div>
 
-
-    <section id="projects">
-        <div class="section-header hidden">
-            <span>MY WORK</span>
-            <h2>Projects</h2>
+      <!-- 5 – Online Exam -->
+      <div class="project-card hidden" style="transition-delay:.15s">
+        <div class="project-img"><i class="fas fa-laptop-code"></i></div>
+        <div class="project-info">
+          <h3>Online Examination System</h3>
+          <p style="font-size:.82rem;color:#999;margin-bottom:14px;line-height:1.7">
+            Relational database system for managing online exams. Covers students, instructors, courses, exams &amp; questions using stored procedures, triggers &amp; constraints — with automatic score calculation and result generation.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:7px">
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">SQL Server</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">Stored Procedures</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">Triggers</span>
+          </div>
         </div>
-        <div class="projects-grid">
-            
-            <div class="project-card hidden">
-                <div class="project-img">
-                    <i class="fas fa-laptop-code"></i> </div>
-                <div class="project-info">
-                    <h3>Online Examination System</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin-bottom: 15px;">
-                        A robust system for managing online exams with anti-cheating measures, auto-grading, and dashboards for students & admins. Built using Repository Pattern.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">ASP.NET Core MVC</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">SQL Server</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">EF Core</span>
-                    </div>
-                </div>
-            </div>
+      </div>
 
-            <div class="project-card hidden" style="transition-delay: 0.2s">
-                <div class="project-img">
-                    <i class="fas fa-book-reader"></i> </div>
-                <div class="project-info">
-                    <h3>Library Management System</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin-bottom: 15px;">
-                        Desktop application for managing library resources. Features include PDF handling, complex LINQ search queries, and secure author authentication.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">C# WinForms</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">LINQ</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">Entity Framework</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card hidden" style="transition-delay: 0.4s">
-                <div class="project-img">
-                    <i class="fas fa-heartbeat"></i> </div>
-                <div class="project-info">
-                    <h3>Healthcare System</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin-bottom: 15px;">
-                        Graduation Project. A platform allowing doctors to list services and patients to book appointments and handle insurance requests seamlessly.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">ASP.NET Web API</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">Angular</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">SQL</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card hidden">
-                <div class="project-img">
-                    <i class="fas fa-user-secret"></i> </div>
-                <div class="project-info">
-                    <h3>Hack Mr. Robot (CTF)</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin-bottom: 15px;">
-                        Successfully penetrated the "Mr. Robot" machine on Hack The Box. Demonstrated skills in vulnerability assessment and privilege escalation.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">Ethical Hacking</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">Penetration Testing</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">Linux</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card hidden" style="transition-delay: 0.2s">
-                <div class="project-img">
-                    <i class="fas fa-shopping-cart"></i> </div>
-                <div class="project-info">
-                    <h3>E-Commerce Website</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin-bottom: 15px;">
-                        DEPI Project. A full-featured online store enabling users to browse products, add to cart, and complete purchases securely.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">ASP.NET MVC</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">Bootstrap</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">SQL Server</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card hidden" style="transition-delay: 0.4s">
-                <div class="project-img">
-                    <i class="fas fa-university"></i> </div>
-                <div class="project-info">
-                    <h3>University System</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin-bottom: 15px;">
-                        A comprehensive management system built using Java to handle university operations, student data, and course registrations effectively.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">Java</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">OOP</span>
-                        <span class="tag" style="font-size: 0.7rem; padding: 5px 10px;">Data Structures</span>
-                    </div>
-                </div>
-            </div>
-
+      <!-- 6 – Library -->
+      <div class="project-card hidden" style="transition-delay:.25s">
+        <div class="project-img"><i class="fas fa-book-reader"></i></div>
+        <div class="project-info">
+          <h3>Library Management System</h3>
+          <p style="font-size:.82rem;color:#999;margin-bottom:14px;line-height:1.7">
+            Manages books, authors &amp; categories via Entity Framework Code First. Full CRUD with relational schema design and advanced LINQ queries for efficient data retrieval.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:7px">
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">C#</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">Entity Framework</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">LINQ</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">SQL Server</span>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section id="contact" style="padding-bottom: 50px;">
-        <div class="section-header hidden">
-            <span>Get in Touch</span>
-            <h2>Contact Me</h2>
+      <!-- 7 – Mr Robot CTF -->
+      <div class="project-card hidden" style="transition-delay:.1s">
+        <div class="project-img"><i class="fas fa-user-secret"></i></div>
+        <div class="project-info">
+          <h3>Mr. Robot CTF Challenge</h3>
+          <p style="font-size:.82rem;color:#999;margin-bottom:14px;line-height:1.7">
+            Solved the Mr. Robot machine on Hack The Box — identified vulnerabilities and exploited them to gain full system access. Applied enumeration, privilege escalation, and vulnerability exploitation techniques with documented attack methodology.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:7px">
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">Ethical Hacking</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">Penetration Testing</span>
+            <span class="tag" style="font-size:.68rem;padding:4px 10px">Linux</span>
+          </div>
         </div>
-        <div class="contact-box hidden">
-            <h1>Let's Work Together!</h1>
-            <p style="color:var(--text-muted); margin-top:10px;">I am currently open for new opportunities.</p>
-            
-            <div class="contact-links">
-                <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmedsshalaby9@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope"></i> ahmedsshalaby9@gmail.com
-                </a>
-                <a target="_blank" href="https://www.linkedin.com/in/ahmed-shalaby-047ab8295/" class="contact-item">
-                    <i class="fab fa-linkedin"></i> LinkedIn Profile
-                </a>
-            </div>
-        </div>
-        
-        <footer style="text-align: center; margin-top: 100px; color: var(--text-muted); font-size: 0.9rem;">
-            Copyright © 2026 Ahmed Saeed. All Rights Reserved.
-        </footer>
-    </section>
-        <script src="script.js"></script>
+      </div>
 
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CONTACT ═══════════════════ -->
+  <section id="contact" style="padding-bottom:60px">
+    <div class="section-header hidden">
+      <span>Get in Touch</span>
+      <h2>Contact Me</h2>
+    </div>
+
+    <div class="contact-box hidden">
+      <h1>Let's Work Together!</h1>
+      <p style="color:var(--neon-green);margin-top:10px;letter-spacing:1px;font-size:.85rem">
+        I am currently open for new opportunities.
+      </p>
+
+      <div class="contact-links">
+        <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmedsshalaby9@gmail.com" class="contact-item">
+          <i class="fas fa-envelope"></i> ahmedsshalaby9@gmail.com
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/ahmed-shalaby-047ab8295/" class="contact-item">
+          <i class="fab fa-linkedin"></i> LinkedIn Profile
+        </a>
+      </div>
+    </div>
+
+    <footer style="text-align:center;margin-top:100px;color:var(--text-muted);font-size:.8rem;letter-spacing:1px">
+      Copyright &copy; 2026 &nbsp;Ahmed Saeed Shalaby. All Rights Reserved.
+    </footer>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
